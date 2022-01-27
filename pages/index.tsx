@@ -1,11 +1,12 @@
 import { ReactElement } from 'react';
+import CatSearchSection from '../components/home/search-section/CatSearchSection';
 import AppLayout from '../layouts/AppLayout';
 
 const Home = () => {
   return (
-    <div>
-      cat-wiki home page
-    </div>
+    <>
+      <CatSearchSection />
+    </>
   )
 }
 
