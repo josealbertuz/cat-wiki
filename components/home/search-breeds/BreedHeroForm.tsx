@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import CatSearchForm from './CatSearchForm';
+import BreedSearchInput from './BreedSearchInput';
 
 
 const HeroContainer = styled.div`
@@ -35,7 +35,7 @@ const FormSubtitle = styled.h2`
     padding-bottom: 2em;
 `;
 
-const HeroForm = () => {
+const BreedHeroForm = () => {
 
     return (
         <HeroContainer>
@@ -43,10 +43,10 @@ const HeroForm = () => {
             <FormContainer>
                 <FormTitle>Catwiki</FormTitle>
                 <FormSubtitle>Get to know more about your cat breed</FormSubtitle>
-                <CatSearchForm />
+                <BreedSearchInput />
             </FormContainer>
         </HeroContainer>
     );
 };
 
-export default HeroForm;
+export default BreedHeroForm;

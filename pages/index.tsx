@@ -1,5 +1,5 @@
 import { ReactElement } from 'react';
-import CatSearchSection from '../components/home/search-section/CatSearchSection';
+import CatSearchSection from '../components/home/BreedSearchSection';
 import AppLayout from '../layouts/AppLayout';
 
 const Home = () => {
