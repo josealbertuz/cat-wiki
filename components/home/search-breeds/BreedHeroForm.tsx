@@ -4,10 +4,12 @@ import BreedSearchInput from './BreedSearchInput';
 
 
 const HeroContainer = styled.div`
-    position: relative;
+    display: grid;
 `;
 
 const HeroImage = styled.img`
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     width: 100%;
@@ -15,12 +17,14 @@ const HeroImage = styled.img`
 `;
 
 const FormContainer = styled.form`
-    font-size: clamp(0.8rem, 5vw, 4rem);
     display: flex;
     flex-direction: column;
-    position: absolute;
-    left: 5%;
-    top: 20%;
+    justify-content: center;
+    width: fit-content;
+    margin-left: 1em;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    font-size: clamp(0.8rem, 5vw, 4rem);
     color: #FFF;
 `;
 
