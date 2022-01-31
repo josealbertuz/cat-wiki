@@ -1,9 +1,9 @@
 import { useQuery } from "react-query"
-import { getCatBreeds } from "../api/services/cat-service"
+import { getCatBreedByName } from "../api/services/cat-service"
 
-export const useCatBreeds = (breed: string) => {
+export const useCatBreedsByName = (breed: string) => {
 
-    return useQuery(['cat-breed', breed], () => getCatBreeds(breed), {
+    return useQuery(['cat-breed', breed], () => getCatBreedByName(breed), {
         enabled: false,
         select: (data) => data.data.map(breed => ({
             id: breed.id,

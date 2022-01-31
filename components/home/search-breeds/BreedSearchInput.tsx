@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { MdSearch } from "react-icons/md";
 import BreedsFoundList from './BreedsFoundList';
-import { useCatBreeds } from '../../../hooks/cat-fetching-hooks';
+import { useCatBreedsByName } from '../../../hooks/cat-fetching-hooks';
 
 const InputWrapper = styled.div`
     position: relative;
@@ -34,7 +34,7 @@ const SearchBreedInput = styled.input`
 const BreedSearchInput = () => {
 
     const [inputText, setInputText] = useState('');
-    const { data, refetch: fetchBreeds } = useCatBreeds(inputText);
+    const { data, refetch: fetchBreeds } = useCatBreedsByName(inputText);
 
     useEffect(() => {
         if (inputText) {

@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 import styled from 'styled-components';
 
@@ -15,7 +16,7 @@ const BreedsFoundListItem = styled.li`
     font-size: 2vmin;
     padding: 1em;
     color: ${({theme}) => theme.colors.main};
-
+    cursor: pointer;
 
     &:hover {
         background-color: #979797;
@@ -31,7 +32,11 @@ const BreedsFoundList = ({breeds}: BreedsFoundListProps) => {
         <BreedsFoundListContainer>
             {
                 breeds.map(({id, breed}) => (
-                    <BreedsFoundListItem>{breed}</BreedsFoundListItem>
+                    <Link
+                        href={`/breeds/${encodeURIComponent(id)}`}
+                    >
+                        <BreedsFoundListItem>{breed}</BreedsFoundListItem>
+                    </Link>
                 ))
             }
         </BreedsFoundListContainer>
